@@ -1,2 +1,4 @@
-package com.amir;public class Student {
+package com.amir;
+
+public class Student {
 }

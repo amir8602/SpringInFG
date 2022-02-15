@@ -7,19 +7,22 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.amir.spring.core"/>
+    <context:component-scan base-package="com.amir.spring.context"/>
 
-<!--    <bean name="student" class="com.amir.spring.core.Student" scope="singleton" init-method="init" >-->
+<!--    <bean name="student" class="com.amir.spring.context.Student" scope="singleton" init-method="init" >-->
 <!--        <property name="name" value="ali"/>-->
 <!--        <property name="age" value="25"/>-->
 <!--        <property name="family" value="ghamari"/>-->
 <!--        <property name="book" ref="historyBook" />-->
 <!--    </bean>-->
-<!--    <bean name="historyBook" class="com.amir.spring.core.HistoryBook" >-->
+<!--    <bean name="historyBook" class="com.amir.spring.context.HistoryBook" >-->
 <!--        <property name="title" value="abcd"/>-->
 <!--        <property name="price" value="1000"/>-->
 <!--        <constructor-arg name="price" value="1000"/>-->
 <!--        <constructor-arg name="title" value="abcd"/>-->
+<!--    </bean>-->
+<!--    <bean name="logger" class="org.apache.log4j.Logger" >-->
+<!--        <constructor-arg name="name" value="logger" />-->
 <!--    </bean>-->
 
 

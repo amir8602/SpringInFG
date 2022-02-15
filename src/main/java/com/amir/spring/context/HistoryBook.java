@@ -1,4 +1,4 @@
-package com.amir.spring.core;
+package com.amir.spring.context;
 
 import lombok.*;
 import org.springframework.context.annotation.Primary;

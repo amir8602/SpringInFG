@@ -1,9 +1,11 @@
 package com.amir;
 
 
-import com.amir.spring.core.Student;
+import com.amir.spring.context.ContextConfig;
+import com.amir.spring.context.Student;
 import org.junit.*;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -17,7 +19,8 @@ public class AppTest {
 
   @BeforeClass
     public static void init() {
-        applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        //applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        applicationContext = new AnnotationConfigApplicationContext(ContextConfig.class);
         System.out.println("start");
     }
 

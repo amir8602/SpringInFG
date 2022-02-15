@@ -1,12 +1,11 @@
-package com.amir.spring.core;
+package com.amir.spring.context;
 
 
 import lombok.*;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Getter@Setter@AllArgsConstructor@NoArgsConstructor@ToString
@@ -14,6 +13,8 @@ import org.springframework.stereotype.Component;
 //@PropertySource("classpath:foo.properties")
 @Lazy
 public class Student {
+    @Autowired
+    private Logger logger;
    // @Value("${candid}")
     @Value("ali")
     private String name;

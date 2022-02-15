@@ -19,7 +19,7 @@ public class ProductController {
     @PostMapping(value = "/save")
     public String save(ProductDTO productDTO){
         logger.debug(productDTO);
-        return "redirect:/index";  //Missing Models when send redirect
+        return "redirect:/";  //Missing Models when send redirect
 
     }
 

@@ -51,7 +51,7 @@ public class AppTest {
     public void StudentMustHaveBookWhenInit(){
       Student actual = (Student) applicationContext.getBean("student");
       Assert.assertNotEquals(null , actual.getBook());
-        System.out.println(applicationContext.getBean("historyBook"));
+        System.out.println(actual.toString());
     }
 
     @AfterClass

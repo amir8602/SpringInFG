@@ -21,7 +21,9 @@
 
 <form:form action="/product/save" method="post" modelAttribute="dto">
     Name : <form:input path="name" name="name"/><br/><br/>
+    <form:errors path="name" cssStyle="color: red" />
     Price : <form:input path="price" name="price"/> <br/><br/>
+    <form:errors path="price" cssStyle="color: red" />
     Type :
     <form:select path="type">
     <form:options items="${dto.validTypes}" />

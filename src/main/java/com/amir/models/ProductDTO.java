@@ -1,7 +1,11 @@
 package com.amir.models;
 
-import lombok.*;
 
+import lombok.*;
+import org.springframework.stereotype.Component;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,10 +13,13 @@ import java.util.Map;
 @Setter
 @Getter
 @ToString
+@Component
 @AllArgsConstructor
 public class ProductDTO {
     private  Integer id;
+    @Size(min=3 , message = "name must be more than 3 Chars" )
     private String name;
+    @Min(value=1000 , message = "price should be grater than 1000")
     private Integer price;
     private String type;
     private Map<String,String> validTypes;
@@ -38,3 +45,4 @@ public class ProductDTO {
         this.type = type;
     }
 }
+

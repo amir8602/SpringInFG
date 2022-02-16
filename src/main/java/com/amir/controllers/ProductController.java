@@ -3,6 +3,7 @@ package com.amir.controllers;
 import com.amir.models.ProductDTO;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,20 +16,21 @@ public class ProductController {
 
     ArrayList<ProductDTO> productDTOS = new ArrayList<ProductDTO>() {
         {
-            add(new ProductDTO(1, "102", 1000));
-            add(new ProductDTO(2, "21", 2000));
+            add(new ProductDTO(1, "102", 1000,"home"));
+            add(new ProductDTO(2, "21", 2000 , "school"));
         }
     };
 
     Logger logger = Logger.getLogger(ProductController.class);
 
     @GetMapping("/show")
-    public String show() {
+    public String show(@ModelAttribute("dto") ProductDTO productDTO ) {
+
         return "product-show";
     }
 
     @PostMapping(value = "/save")
-    public String save(ProductDTO productDTO) {
+    public String save(@ModelAttribute("dto") ProductDTO productDTO) {
         SecureRandom random = new SecureRandom();
         productDTO.setId(random.nextInt(1000));
         productDTOS.add(productDTO);
